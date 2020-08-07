@@ -1,0 +1,13 @@
+body {
+  background-image: url('graphics/autumn.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.wood, .pLearnButton, .pSlipButton, .pGuessButton, .answerChoice {
+  background-image: url('graphics/wood.jpg');
+  cursor: pointer;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: bold;
+}

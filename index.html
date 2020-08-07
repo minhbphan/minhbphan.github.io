@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Apple Picking: BKT Edition</title>
+    <link rel="stylesheet" href="stylesheet.css">
+  </head>
+  <body style="text-align: center">
+
+    <!-- Home screen scene leading to instructions, preset, or credits -->
+    <div id="home">
+      <img src="graphics/logo.png" alt="logo">
+      <br><br>
+      <button type="button" class="wood" id="toPreset" style="font-size: 36px">Start Game</button>
+      <br><br>
+      <button type="button" class="wood" id="toInstructions" style="font-size: 36px">Instructions</button>
+      <br><br>
+      <button type="button" class="wood" id="toCredits" style="font-size: 36px">Credits</button>
+    </div>
+
+    <!-- Instructions slides with arrows to go back and forth between pics & home scene -->
+    <div id="instructions" style="display: none">
+      <button type="button" class="wood" id="instructionsHome">Home</button>
+      <h1>Instructions:</h1>
+      <h2 id="slideProgress"></h2>
+      <img name="slide" width="65%" height="auto">
+      <br>
+      <button type="button" class="wood" id="previous">Previous</button>
+      <button type="button" class="wood" id="next">Next</button>
+    </div>
+
+    <!-- Credits leads back to home scene -->
+    <div id="credits" style="display: none">
+      <h1>Credits:</h1>
+      <button type="button" class="wood" id="creditsHome">Home</button>
+      <br>
+      <img src="credits.png" alt="credits">
+    </div>
+
+    <!-- Preset is where players set their BKT values-->
+    <div id="preset" style="display: none">
+      <div id="pLearn-parent">
+        <h2>Please choose a difficulty setting:</h2>
+        <br>
+        <button type="button" class="pLearnButton">Regular <br>(P(Learn) = 0.6)</button>
+        <button type="button" class="pLearnButton">Hard <br>(P(Learn) = 0.4)</button>
+      </div>
+
+      <div id="pSlip-parent">
+        <h2>Please select a level for P(Slip):</h2>
+        <br>
+        <button type="button" class="pSlipButton">Low<br>0.1</button>
+        <button type="button" class="pSlipButton">Med<br>0.2</button>
+        <button type="button" class="pSlipButton">High<br>0.3</button>
+      </div>
+
+      <div id="pGuess-parent">
+        <h2>Please select a level for P(Guess):</h2>
+        <br>
+        <button type="button" class="pGuessButton">Low<br>0.1</button>
+        <button type="button" class="pGuessButton">Med<br>0.2</button>
+        <button type="button" class="pGuessButton">High<br>0.3</button>
+      </div>
+
+      <br>
+      <button type="button" class="wood" id="backHome">Back Home</button>
+      <button type="button" class="wood" id="startGame">Let's Pick Apples!</button>
+    </div>
+
+    <!-- mainGame is scene of actual gameplay -->
+    <div id="mainGame" style="display: none">
+      <!-- <h1>Time to pick some apples!</h1> -->
+      <br>
+      <h2 id="pKnow">P(Know): 0.2</h2>
+      <br>
+      <img id="tree" src="graphics/appleTree.png" alt="neutral tree">
+      <h2 id = "questions"></h2>
+      <h3 id = "choices"></h3>
+      <br>
+        <button type="button" class="answerChoice">Choice A</button>
+        <button type="button" class="answerChoice">Choice B</button>
+        <button type="button" class="answerChoice">Choice C</button>
+        <button type="button" class="answerChoice">Choice D</button>
+      <br>
+      <button type="button" class="wood" id="quit">Quit Game</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

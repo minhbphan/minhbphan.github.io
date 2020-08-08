@@ -90,7 +90,7 @@ const reg = [
     answer: "a"
   },
   {
-    question: "Who is kept away when an apple is eaten a day?",
+    question: "Who is kept away when an apple is eaten once a day?",
     choices: "\n(a) Professor\n(b) Doctor\n(c) Chef\n(d) Farmer",
     answer: "b"
   },
@@ -142,7 +142,7 @@ const regEncoded = [
     answer: "a"
   },
   {
-    question: "W is cpt away wn an apl is itn ay day",
+    question: "W is cpt away wn an apl is itn wns ay day",
     choices: "\n(a) Professor\n(b) Doctor\n(c) Chef\n(d) Farmer",
     answer: "b"
   },

@@ -18,11 +18,6 @@ slideImages[5] = "tutorial/slide6.png"
 slideImages[6] = "tutorial/slide7.png"
 slideImages[7] = "tutorial/slide8.png"
 slideImages[8] = "tutorial/slide9.png"
-slideImages[9] = "tutorial/slide10.png"
-slideImages[10] = "tutorial/slide11.png"
-slideImages[11] = "tutorial/slide12.png"
-slideImages[12] = "tutorial/slide13.png"
-slideImages[13] = "tutorial/slide14.png"
 
 //instructions screen and back
 var progess = document.getElementById('slideProgress')
@@ -34,7 +29,7 @@ toInstructions.addEventListener("click", function() {
   prevSlide.disabled = true
   nextSlide.disabled = false
   document.slide.src = slideImages[slideIndex]
-  progess.innerHTML = "Slide " + (slideIndex+1) + "/14"
+  progess.innerHTML = "Slide " + (slideIndex+1) + "/9"
 })
 var instructHome = document.getElementById('instructionsHome')
 instructHome.addEventListener("click", function() {
@@ -52,7 +47,7 @@ prevSlide.addEventListener("click", function() {
     prevSlide.disabled = true
   }
   document.slide.src = slideImages[slideIndex]
-  progess.innerHTML = "Slide " + (slideIndex+1) + "/14"
+  progess.innerHTML = "Slide " + (slideIndex+1) + "/9"
 })
 
 var nextSlide = document.getElementById('next')
@@ -70,7 +65,7 @@ nextSlide.addEventListener("click", function() {
     nextSlide.innerHTML = "Next"
   }
   document.slide.src = slideImages[slideIndex]
-  progess.innerHTML = "Slide " + (slideIndex+1) + "/14"
+  progess.innerHTML = "Slide " + (slideIndex+1) + "/9"
 })
 
 //credits screen and back

@@ -91,52 +91,62 @@ const reg = [
   {
     question: "What Disney princess fell into a deep slumber because she bit a poisonous apple?",
     choices: "\n(a) Snow White\n(b) Sleeping Beauty\n(c) Cinderella\n(d) Belle",
-    answer: "a"
+    answer: "a",
+    corChoice: "Snow White"
   },
   {
     question: "Who is kept away when an apple is eaten once a day?",
     choices: "\n(a) Professor\n(b) Doctor\n(c) Chef\n(d) Farmer",
-    answer: "b"
+    answer: "b",
+    corChoice: "Doctor"
   },
   {
     question: "Which type of apple is typically green and often used in making pies?",
     choices: "\n(a) Gala\n(b) Braeburn\n(c) Fuji\n(d) Granny Smith",
-    answer: "d"
+    answer: "d",
+    corChoice: "Granny Smith"
   },
   {
     question: "In the Bible, who bites the apple in the Garden of Eden?",
     choices: "\n(a) Eve\n(b) Adam\n(c) Lilith\n(d) Satan",
-    answer: "a"
+    answer: "a",
+    corChoice: "Eve"
   },
   {
     question: "What is the popular carnival game involving apples?",
     choices: "\n(a) Apple carving\n(b) Bobbing for apples\n(c) Pin the apple\n(d) Apple maze",
-    answer: "b"
+    answer: "b",
+    corChoice: "Bobbing for apples"
   },
   {
     question: "Where is most of the fiber located in an apple?",
     choices: "\n(a) Skin\n(b) Inner flesh\n(c) Core\n(d) Seed",
-    answer: "a"
+    answer: "a",
+    corChoice: "Skin"
   },
   {
     question: "How many letters are there in the word 'apple'?",
     choices: "\n(a) 4\n(b) 8\n(c) 5\n(d) 7",
-    answer: "c"
+    answer: "c",
+    corChoice: "5"
   },
   {
     question: "What color is the apple usually depicted as in pop culture?",
     choices: "\n(a) Blue\n(b) Yellow\n(c) Red\n(d) Orange",
-    answer: "c"
+    answer: "c",
+    corChoice: "Red"
   },
   {
     question: "What do apples grow on?",
     choices: "\n(a) Bushes\n(b) Ground\n(c) Trees\n(d) Other",
-    answer: "c"
+    answer: "c",
+    corChoice:"Trees"
   },
   {
     question: "What are apples covered in to make a popular sweet treat?",
     choices: "\n(a) Fudge\n(b) Marshmallow\n(c) Chocolate\n(d) Caramel",
-    answer: "d"
+    answer: "d",
+    corChoice: "Caramel"
   },
 ]
 const regEncoded = [
@@ -195,52 +205,62 @@ const hard = [
   {
     question: "What is the science of growing apples called?",
     choices: "\n(a) Pomology\n(b) Redology\n(c) Taology\n(d) Fructology",
-    answer: "a"
+    answer: "a",
+    corChoice: "Pomology"
   },
   {
     question: "What state is the number one producer of apples in the U.S.?",
     choices: "\n(a) New York\n(b) Wyoming\n(c) Washington\n(d) California",
-    answer: "c"
+    answer: "c",
+    corChoice: "Washington"
   },
   {
     question: "What type of apple is native to America?",
     choices: "\n(a) Gala\n(b) Crabapple\n(c) Pink Lady\n(d) All of the above",
-    answer: "b"
+    answer: "b",
+    corChoice: "Crabapple"
   },
   {
     question: "How many pounds of apples does the average person in the U.S. consume in a year?",
     choices: "\n(a) 19\n(b) 30\n(c) 10\n(d) 8",
-    answer: "a"
+    answer: "a",
+    corChoice: "19"
   },
   {
     question: "Approximately how many varieties of apples are there in the world?",
     choices: "\n(a) 1000\n(b) 2500\n(c) 5000\n(d) 7500",
-    answer: "d"
+    answer: "d",
+    corChoice: "7500"
   },
   {
     question: "What is another name given to apples in colonial times?",
     choices: "\n(a) Red potato\n(b) Eden fruit\n(c) Winter banana\n(d) Potato of the sky",
-    answer: "c"
+    answer: "c",
+    corChoice: "Winter banana"
   },
   {
     question: "What did President George Washington enjoy doing with his apples?",
     choices: "\n(a) Pruning\n(b) Baking\n(c) Decorating\n(d) Eating plain",
-    answer: "a"
+    answer: "a",
+    corChoice: "Pruning"
   },
   {
     question: "How many pounds of apples are needed to make one 9-inch pie?",
     choices: "\n(a) 0.5\n(b) 1\n(c) 3\n(d) 2",
-    answer: "d"
+    answer: "d",
+    corChoice: "2"
   },
   {
     question: "Where were the first apple trees planted in the U.S.?",
     choices: "\n(a) Massachusetts Bay\n(b) Virginia\n(c) Connecticut\n(d) Other",
-    answer: "a"
+    answer: "a",
+    corChoice: "Massachusetts Bay"
   },
   {
     question: "How old are apple trees when they produce their first fruit?",
     choices: "\n(a) 8-10 months\n(b) 4-5 years\n(c) 2-3 years\n(d) 7-8 years",
-    answer: "b"
+    answer: "b",
+    corChoice: "4-5 years"
   },
 ]
 const hardEncoded = [
@@ -394,6 +414,9 @@ function quitGame() {
   resetPSlipButtons()
   resetPGuessButtons()
   startButton.disabled = false
+  triviaNum.sort((a,b) => 0.5-Math.random())
+  temp = 0
+  currentQuestion = triviaNum[temp]
   currentQuestion = 0
   knowValue = 0.2
   learnValue = 0.0
@@ -438,7 +461,10 @@ var gameOverSound = new sound("sounds/gameOver.mp3")
 var cheerSound = new sound("sounds/cheer.mp3")
 var slipSound = new sound("sounds/slip.mp3")
 
-var currentQuestion = 0
+const triviaNum = [0,1,2,3,4,5,6,7,8,9]
+triviaNum.sort((a,b) => 0.5-Math.random())    //randomizes questions
+var temp = 0
+var currentQuestion = triviaNum[temp]
 var knowValue = 0.2
 
 var pKnowSpace = document.getElementById('pKnow')
@@ -509,7 +535,7 @@ function checkAnswer(choiceLetter) {
     } else {
       errorSound.play()
       treeImage.src = 'graphics/sad.png'
-      questionSpace.innerHTML = "Incorrect!"
+      questionSpace.innerHTML = "Incorrect! The correct answer is " + reg[currentQuestion].corChoice
       choiceSpace.innerHTML = ''
       updatePKnow(false)
     }
@@ -533,7 +559,7 @@ function checkAnswer(choiceLetter) {
     } else {
       errorSound.play()
       treeImage.src = 'graphics/sad.png'
-      questionSpace.innerHTML = "Incorrect!"
+      questionSpace.innerHTML = "Incorrect! The correct answer is " + hard[currentQuestion].corChoice
       choiceSpace.innerHTML = ''
       updatePKnow(false)
     }
@@ -559,10 +585,11 @@ function updatePKnow(correct) {
 
 //--------helper function to update the question asked
 function nextQuestion() {
-  if (knowValue >= 0.95 || currentQuestion == 9) {   //reaches mastery or no more questions
+  if (knowValue >= 0.95 || temp == 9) {   //reaches mastery or no more questions
     endGame()
   } else {
-    currentQuestion++
+    temp++
+    currentQuestion = triviaNum[temp]
     treeImage.src = 'graphics/appleTree.png'
     if (learnValue == 0.6) {    //regular version
       if (Math.random() <= guessValue) {

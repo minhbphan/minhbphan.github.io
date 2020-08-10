@@ -4,10 +4,10 @@ body {
   background-attachment: fixed;
   background-position: center;
 }
+
 .wood, .pLearnButton, .pSlipButton, .pGuessButton, .answerChoice {
   background-image: url('graphics/wood.jpg');
   cursor: pointer;
-  font-family: Georgia;
+  font-family: Apple Chancery, cursive;
   font-size: 20px;
-  font-weight: bold;
 }

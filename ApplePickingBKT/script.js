@@ -45,25 +45,29 @@ instructHome.addEventListener("click", function() {
 //prev and next slide buttons
 var prevSlide = document.getElementById('previous')
 prevSlide.addEventListener("click", function() {
-  //changeSlide("prev")
   prevSlide.disabled = false
   nextSlide.disabled = false
   slideIndex--
-  if (slideIndex == 0) {
+  if (slideIndex == 0) {  ////at first tutorial slide
     prevSlide.disabled = true
   }
   document.slide.src = slideImages[slideIndex]
   progess.innerHTML = "Slide " + (slideIndex+1) + "/14"
 })
-//prevSlide.addEventListener("click", changeSlide("prev"))
+
 var nextSlide = document.getElementById('next')
 nextSlide.addEventListener("click", function() {
-  //changeSlide("next")
+  if (slideIndex == slideImages.length - 1) {   //switches to preset screen
+    document.getElementById('preset').style.display = 'block'
+    document.getElementById('instructions').style.display = 'none'
+  }
   prevSlide.disabled = false
   nextSlide.disabled = false
   slideIndex++
-  if (slideIndex == slideImages.length - 1) {
-    nextSlide.disabled = true
+  if (slideIndex == slideImages.length - 1) { //at last tutorial slide
+    nextSlide.innerHTML = "Start Game"
+  } else {
+    nextSlide.innerHTML = "Next"
   }
   document.slide.src = slideImages[slideIndex]
   progess.innerHTML = "Slide " + (slideIndex+1) + "/14"
@@ -116,7 +120,7 @@ const reg = [
   },
   {
     question: "How many letters are there in the word 'apple'?",
-    choices: "\n(a) 3\n(b) 8\n(c) 5\n(d) 7",
+    choices: "\n(a) 4\n(b) 8\n(c) 5\n(d) 7",
     answer: "c"
   },
   {
@@ -168,7 +172,7 @@ const regEncoded = [
   },
   {
     question: "Hw many ltrs ar zr in z wrd 'apl'",
-    choices: "\n(a) 3\n(b) 8\n(c) 5\n(d) 7",
+    choices: "\n(a) 4\n(b) 8\n(c) 5\n(d) 7",
     answer: "c"
   },
   {

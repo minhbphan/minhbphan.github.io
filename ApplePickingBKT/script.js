@@ -1,3 +1,16 @@
+//--------------!!!!!Intro space!!!!!----------
+var mathButton = document.getElementById('algoButton')
+var mathSpace = document.getElementById('algoSpace')
+mathButton.addEventListener("click", function() {
+  if (mathButton.innerHTML == "See The Algorithm") {
+    mathSpace.style.display = 'block'
+    mathButton.innerHTML = "Hide The Algorithm"
+  } else {
+    mathSpace.style.display = 'none'
+    mathButton.innerHTML = "See The Algorithm"
+  }
+})
+
 //--------------!!!!!HOME SCREEN!!!!!----------
 //home screen
 var presetButton = document.getElementById('toPreset')
@@ -27,7 +40,8 @@ toInstructions.addEventListener("click", function() {
   document.getElementById('home').style.display = 'none'
   slideIndex = 0
   prevSlide.disabled = true
-  nextSlide.disabled = false
+  //nextSlide.disabled = false
+  nextSlide.innerHTML = "Next"
   document.slide.src = slideImages[slideIndex]
   progess.innerHTML = "Slide " + (slideIndex+1) + "/9"
 })
@@ -41,10 +55,13 @@ instructHome.addEventListener("click", function() {
 var prevSlide = document.getElementById('previous')
 prevSlide.addEventListener("click", function() {
   prevSlide.disabled = false
-  nextSlide.disabled = false
+  //nextSlide.disabled = false
   slideIndex--
   if (slideIndex == 0) {  ////at first tutorial slide
     prevSlide.disabled = true
+  }
+  if (slideIndex != slideImages.length - 1) {
+    nextSlide.innerHTML = "Next"
   }
   document.slide.src = slideImages[slideIndex]
   progess.innerHTML = "Slide " + (slideIndex+1) + "/9"
@@ -57,7 +74,7 @@ nextSlide.addEventListener("click", function() {
     document.getElementById('instructions').style.display = 'none'
   }
   prevSlide.disabled = false
-  nextSlide.disabled = false
+  //nextSlide.disabled = false
   slideIndex++
   if (slideIndex == slideImages.length - 1) { //at last tutorial slide
     nextSlide.innerHTML = "Start Game"
@@ -465,6 +482,7 @@ var knowValue = 0.2
 var pKnowSpace = document.getElementById('pKnow')
 var questionSpace = document.getElementById('questions')
 var choiceSpace = document.getElementById('choices')
+var chanceSpace = document.getElementById('chances')
 
 var buttonParent = document.getElementById('mainGame')
 var choiceCollection = buttonParent.getElementsByClassName('answerChoice')
@@ -487,6 +505,7 @@ function firstQuestion() {    //loads first question
       choiceSpace.innerHTML = hard[currentQuestion].choices
   }
   pKnowSpace.innerHTML = "P(Know): " + knowValue
+  chanceSpace.innerHTML = "Chances Remaining: " + (10-temp)
   //enables all answer choices
   buttonA.disabled = false;
   buttonB.disabled = false;
@@ -584,6 +603,7 @@ function nextQuestion() {
     endGame()
   } else {
     temp++
+    chanceSpace.innerHTML = "Chances Remaining: " + (10-temp)
     currentQuestion = triviaNum[temp]
     treeImage.src = 'graphics/appleTree.png'
     if (learnValue == 0.6) {    //regular version
@@ -608,6 +628,7 @@ function nextQuestion() {
 
 //------Game ends
 function endGame() {
+  chanceSpace.innerHTML = "Chances Remaining: 0"
   if (knowValue >= 0.95) {   //at mastery
     treeImage.src = 'graphics/excited.png'
     cheerSound.play()

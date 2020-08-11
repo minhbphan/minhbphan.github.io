@@ -5,6 +5,15 @@ body {
   background-position: center;
 }
 
+.intro {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 0px 120px;
+  line-height: 1.6
+}
+
+
 .wood, .pLearnButton, .pSlipButton, .pGuessButton, .answerChoice {
   background-image: url('graphics/wood.jpg');
   cursor: pointer;

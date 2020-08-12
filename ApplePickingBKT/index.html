@@ -6,16 +6,16 @@
   </head>
   <body>
     <div class="intro">
-      <h1 style="text-align: center"><u>An Introduction to Bayesian Knowledge Tracing</u></h1>
-      <h2><u>What Is BKT?</u></h2>
+      <img src="title.png" alt="title image">
+      <h2><i>What</i> Is BKT?</h2>
       <p>Bayesian Knowledge Tracing (BKT for short) is an artificial intelligence algorithm used to predict if students have learned a skill based on their state of knowledge.</p>
 
-      <h2><u>How Is It Calculated?</u></h2>
+      <h2><i>How</i> Is It Calculated?</h2>
       <p>BKT is calculated based on 4 probabilities: <b>P(Know), P(Learn), P(Slip), and P(Guess)</b>.</p>
-      <p><b>P(Know)</b>: the likelihood of the user learning the targeted content; “mastery” of the content is usually considered achieved if this value reaches 0.95 or greater.</p>
-      <p><b>P(Learn)</b>: the likelihood that the user will learn the skill in the next practice opportunity; this is sometimes referred to how “easily” the skill is to master, and a lower P(Learn) value will suggest a skill that is more difficult to learn than one that has a higher P(Learn) value.</p>
-      <p><b>P(Slip)</b>: the likelihood that the user will answer incorrectly despite already knowing the skill; a low P(Slip) value suggests that if the user already knows the skill, they will almost certainly answer correctly.</p>
-      <p><b>P(Guess)</b>: the likelihood that the user will answer correctly despite not knowing the skill; a P(Guess) value that is too high might suggest some degeneracy in the model where the P(Know) value implies that the user has mastered the skill but in reality, they are just good at guessing.</p>
+      <p><span style="color:#8FBB09"><b>P(Know)</b></span>: the likelihood of the user learning the targeted content; “mastery” of the content is usually considered achieved if this value reaches 0.95 or greater.</p>
+      <p><span style="color:#FFD700"><b>P(Learn)</b></span>: the likelihood that the user will learn the skill in the next practice opportunity; this is sometimes referred to how “easily” the skill is to master, and a lower P(Learn) value will suggest a skill that is more difficult to learn than one that has a higher P(Learn) value.</p>
+      <p><span style="color:#FA8F04"><b>P(Slip)</b></span>: the likelihood that the user will answer incorrectly despite already knowing the skill; a low P(Slip) value suggests that if the user already knows the skill, they will almost certainly answer correctly.</p>
+      <p><span style="color:#F64D0D"><b>P(Guess)</b></span>: the likelihood that the user will answer correctly despite not knowing the skill; a P(Guess) value that is too high might suggest some degeneracy in the model where the P(Know) value implies that the user has mastered the skill but in reality, they are just good at guessing.</p>
 
       <button type="button" class="wood" id="algoButton" style="font-size: 25px">See The Algorithm</button>
       <div id="algoSpace" style="display: none">
@@ -26,10 +26,10 @@
         <img src="pKnow.png" alt="P(Know) probability from conditional results">
       </div>
 
-      <h2><u>Why Is It Useful?</u></h2>
+      <h2><i>Why</i> Is It Useful?</h2>
       <p>BKT provides us with a means to advance users’ learning experiences to make them more engaging and are utilized through Open Learning Initiatives. It’s also a great tool for instructors to infer whether or not students are successful in their efforts and can improve their curriculum accordingly.</p>
-      <br>
-      <h2>Now, let's learn some apple trivia and master apple picking with BKT!</h2>
+
+      <h2 style="font-family: fantasy">Now, let's learn some apple trivia and master apple picking with BKT!</h2>
     </div>
     <br>
 

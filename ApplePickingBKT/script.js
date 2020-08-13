@@ -621,7 +621,7 @@ function updatePKnow(correct) {
 
 //--------helper function to update the question asked
 function nextQuestion() {
-  if (knowValue >= 0.95 || temp == 9) {   //reaches mastery or no more questions
+  if (knowValue.toFixed(2) >= 0.95 || temp == 9) {   //reaches mastery or no more questions
     endGame()
   } else {
     temp++
@@ -656,7 +656,7 @@ function nextQuestion() {
 function endGame() {
   temp++
   chanceSpace.innerHTML = "Questions Remaining: " + (10-temp)
-  if (knowValue >= 0.95) {   //at mastery
+  if (knowValue.toFixed(2) >= 0.95) {   //at mastery
     treeImage.src = 'graphics/excited.png'
     cheerSound.play()
     questionSpace.innerHTML = "Congrats! You've mastered apple picking! Go bake a pie :)"

@@ -13,10 +13,17 @@ body {
   line-height: 1.6
 }
 
-
 .wood, .pLearnButton, .pSlipButton, .pGuessButton, .answerChoice {
   background-image: url('graphics/wood.jpg');
   cursor: pointer;
   font-family: Apple Chancery, cursive;
   font-size: 20px;
+}
+
+#pKnow, #chances {
+  font-weight: bolder;
+  display:inline-block;
+  background-color: yellow;
+  padding: 5px;
+  border: 3px solid black
 }

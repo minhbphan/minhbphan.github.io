@@ -29,11 +29,11 @@
       <h2><i>Why</i> Is It Useful?</h2>
       <p>BKT provides us with a means to advance users’ learning experiences to make them more engaging and are utilized through Open Learning Initiatives. It’s also a great tool for instructors to infer whether or not students are successful in their efforts and can improve their curriculum accordingly.</p>
 
-      <h2 style="font-family: fantasy">Now, let's learn some apple trivia and master apple picking with BKT!</h2>
+      <h2 style="font-family: Apple Chancery, cursive">Now, let's learn some apple trivia and master apple picking with BKT!</h2>
     </div>
-    <br>
 
-    <div class="explainable" style="text-align: center; font-family: Apple Chancery, cursive">
+
+    <div class="explainable" style="text-align: center; font-family: Apple Chancery, cursive;">
       <!-- Home screen scene leading to instructions, preset, or credits -->
       <div id="home">
         <img src="graphics/logo.png" alt="logo">
@@ -96,22 +96,21 @@
 
       <!-- mainGame is scene of actual gameplay -->
       <div id="mainGame" style="display: none">
-        <h2 id="pKnow">P(Know): 0.2</h2>
+        <h2 id="pKnow" style="margin-right:350px">P(Know): 0.2</h2>
+        <h2 id="chances">Chances Remaining: 0</h2>
         <br>
-        <img id="tree" src="graphics/appleTree.png" alt="neutral tree">
+        <img id="tree" src="graphics/appleTree.png" alt="neutral tree"  style="height: 500px; width: auto">
         <h2 id = "questions"></h2>
         <h3 id = "choices"></h3>
-        <br>
           <button type="button" class="answerChoice">Choice A</button>
           <button type="button" class="answerChoice">Choice B</button>
           <button type="button" class="answerChoice">Choice C</button>
           <button type="button" class="answerChoice">Choice D</button>
-        <br>
-        <h2 id="chances">Chances Remaining: 0</h2>
+          <br>
         <button type="button" class="wood" id="quit">Quit Game</button>
       </div>
     </div>
-
+    <br>
     <script src="script.js"></script>
   </body>
 </html>

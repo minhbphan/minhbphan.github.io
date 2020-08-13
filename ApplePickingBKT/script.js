@@ -440,7 +440,7 @@ function quitGame() {
 var startButton = document.getElementById('startGame')
 startButton.addEventListener("click", function() {
   if (learnValue != 0 && slipValue != 0 && guessValue != 0) {
-    window.alert("Your P(Learn) is " + learnValue + ", P(Slip) is " + slipValue + ", and P(Guess) is " + guessValue)
+    // window.alert("Your P(Learn) is " + learnValue + ", P(Slip) is " + slipValue + ", and P(Guess) is " + guessValue)
     document.getElementById('mainGame').style.display = 'block'
     document.getElementById('preset').style.display = 'none'
     firstQuestion()
@@ -578,7 +578,7 @@ function checkAnswer(choiceLetter) {
       updatePKnow(false)
     }
   }
-  setTimeout(nextQuestion, 2000)
+  setTimeout(nextQuestion, 2500)
 }
 
 function updatePKnow(correct) {
@@ -628,7 +628,8 @@ function nextQuestion() {
 
 //------Game ends
 function endGame() {
-  chanceSpace.innerHTML = "Chances Remaining: 0"
+  temp++
+  chanceSpace.innerHTML = "Chances Remaining: " + (10-temp)
   if (knowValue >= 0.95) {   //at mastery
     treeImage.src = 'graphics/excited.png'
     cheerSound.play()

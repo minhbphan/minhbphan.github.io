@@ -138,7 +138,7 @@ const reg = [
   },
   {
     question: "How many letters are there in the word 'apple'?",
-    choices: "\n(a) 4\n(b) 8\n(c) 5\n(d) 7",
+    choices: "\n(a) 4\n(b) 8\n(c) 5\n(d) 10",
     answer: "c",
     corChoice: "5"
   },
@@ -163,54 +163,64 @@ const reg = [
 ]
 const regEncoded = [
   {
-    question: "Wat disny princs fl int ay dip slumbr bcaus $ bit ay pisnus apl",
-    choices: "\n(a) Snow White\n(b) Sleeping Beauty\n(c) Cinderella\n(d) Belle",
-    answer: "a"
+    question: "Haxat Isnoupp plincopt borr dinke pit pour trumfol focaxauso sko fit pit deiseneus axappro?",
+    choices: "\n(a) Sned Hito\n(b) Troopick Foaxautupp\n(c) Cictolorraxa\n(d) Forro",
+    answer: "a",
+    corChoice: "Sned Hito"
   },
   {
-    question: "W is cpt away wn an apl is itn wns ay day",
-    choices: "\n(a) Professor\n(b) Doctor\n(c) Chef\n(d) Farmer",
-    answer: "b"
+    question: "He dis goss axawaxaupp hon up axappro dis oaxaton enco pit daxaupp?",
+    choices: "\n(a) Plebossel\n(b) Pendel\n(c) Stob\n(d) Baxalmol",
+    answer: "b",
+    corChoice: "Pendel"
   },
   {
-    question: "Wi¢ typ awf apl is typicali grin and ftn usd in macng pis",
-    choices: "\n(a) Gala\n(b) Braeburn\n(c) Fuji\n(d) Granny Smith",
-    answer: "d"
+    question: "Hist typo eb axappro dis typici ox kloon pi ebton usow din vaxakick pios?",
+    choices: "\n(a) Kaxaraxa\n(b) Flaxaofuln\n(c) Buji\n(d) Klaxannupp Smith",
+    answer: "d",
+    corChoice: "Klaxannupp Smith"
   },
   {
-    question: "In z bibl w bits z apl in z gardn awf dn",
-    choices: "\n(a) Eve\n(b) Adam\n(c) Lilith\n(d) Satan",
-    answer: "a"
+    question: "Din zo Fifro, he fitos zo axappro din zo Kaxaldon eb Odon?",
+    choices: "\n(a) Ovo\n(b) Adaxam\n(c) Ririth\n(d) Saxataxan",
+    answer: "a",
+    corChoice: "Ovo"
   },
   {
-    question: "Wat is z ppular carnival gam invlvng apls",
-    choices: "\n(a) Apple carving\n(b) Bobbing for apples\n(c) Pin the apple\n(d) Apple maze",
-    answer: "b"
+    question: "Haxat dis zo depuraxal caxalnivaxar kaxamo dinvervick axappros?",
+    choices: "\n(a) Appro caxalvick\n(b) Feffick bel axappros\n(c) Pin zo axappro\n(d) Appro vaxazo",
+    answer: "b",
+    corChoice: "Feffick bel axappros"
   },
   {
-    question: "Wr is mst awf z fibr lcatd in an apl",
-    choices: "\n(a) Skin\n(b) Inner flesh\n(c) Core\n(d) Seed",
-    answer: "a"
+    question: "Holo dis vech eb zo bifol recaxatow din up axappro?",
+    choices: "\n(a) Shin\n(b) Dinnol brosk\n(c) Celo\n(d) Soow",
+    answer: "a",
+    corChoice: "Shin"
   },
   {
-    question: "Hw many ltrs ar zr in z wrd 'apl'",
-    choices: "\n(a) 4\n(b) 8\n(c) 5\n(d) 7",
-    answer: "c"
+    question: "Whed vaxanupp rottols axalo zolo din zo weld 'axappro'?",
+    choices: "\n(a) 4\n(b) 8\n(c) 5\n(d) 10",
+    answer: "c",
+    corChoice: "5"
   },
   {
-    question: "Wat clr is z apl usuali dpictd as in pp cultur",
-    choices: "\n(a) Blue\n(b) Yellow\n(c) Red\n(d) Orange",
-    answer: "c"
+    question: "Haxat cerel dis zo axappro usui ox popindow axas din dep curtulo?",
+    choices: "\n(a) Fruo\n(b) Yorred\n(c) Low\n(d) Elaxacko",
+    answer: "c",
+    corChoice: "Low"
   },
   {
-    question: "Wat d apls grw awn",
-    choices: "\n(a) Bushes\n(b) Ground\n(c) Trees\n(d) Other",
-    answer: "c"
+    question: "Haxat pe axappros kled en?",
+    choices: "\n(a) Fuskos\n(b) Kleuct\n(c) Sloos\n(d) Ethol",
+    answer: "c",
+    corChoice: "Sloos"
   },
   {
-    question: "Wat ar apls cvrd in tu mayc ay ppular swit trat",
-    choices: "\n(a) Fudge\n(b) Marshmallow\n(c) Chocolate\n(d) Caramel",
-    answer: "d"
+    question: "Haxat axalo axappros cevolow din te vaxako pit depuraxal swook sloaxat?",
+    choices: "\n(a) Budgo\n(b) Vaxalskmaxarred\n(c) Steceraxato\n(d) Caxalaxamor",
+    answer: "d",
+    corChoice: "Caxalaxamor"
   },
 ]
 const hard = [
@@ -277,54 +287,64 @@ const hard = [
 ]
 const hardEncoded = [
   {
-    question: "Wat is z scins awf grwng apls cald",
-    choices: "\n(a) Pomology\n(b) Redology\n(c) Taology\n(d) Fructology",
-    answer: "a"
+    question: "Haxat dis zo scionco eb klewick axappros caxarrow?",
+    choices: "\n(a) Demeregupp\n(b) Loderegupp\n(c) Taxaeregupp\n(d) Blunderegupp",
+    answer: "a",
+    corChoice: "Demeregupp"
   },
   {
-    question: "Wat stayt is z numbr wn prducr awf apls in z u.S.",
-    choices: "\n(a) New York\n(b) Wyoming\n(c) Washington\n(d) California",
-    answer: "c"
+    question: "Haxat chaxato dis zo numfol eno pleducol eb axappros din zo U.S.?",
+    choices: "\n(a) Jod Yelk\n(b) Wyemick\n(c) Waxaskickten\n(d) Caxaribelniaxa",
+    answer: "c",
+    corChoice: "Waxaskickten"
   },
   {
-    question: "Wat typ awf apl is nativ tu amrica",
-    choices: "\n(a) Gala\n(b) Crabapple\n(c) Pink Lady\n(d) All of the above",
-    answer: "b"
+    question: "Haxat typo eb axappro dis naxativo te Amolicaxa?",
+    choices: "\n(a) Kaxaraxa\n(b) Claxafaxappro\n(c) Pint Raxadupp\n(d) Arr eb zo axafevo",
+    answer: "b",
+    corChoice: "Claxafaxappro"
   },
   {
-    question: "Hw many pawnds awf apls ds z avrag prsn in z u.S. cnsum in ay yar",
+    question: "Whed vaxanupp deucts eb axappros peos zo axavolaxago dolsen din zo U.S. censumo din pit yoaxal?",
     choices: "\n(a) 19\n(b) 30\n(c) 10\n(d) 8",
-    answer: "a"
+    answer: "a",
+    corChoice: "19"
   },
   {
-    question: "Aprcsimatli hw many varitis awf apls ar zr in z wrld",
+    question: "Appleximaxatorupp whed vaxanupp maxaliotios eb axappros axalo zolo din zo welrd?",
     choices: "\n(a) 1000\n(b) 2500\n(c) 5000\n(d) 7500",
-    answer: "d"
+    answer: "d",
+    corChoice: "7500"
   },
   {
-    question: "Wat is anzr nam givn tu apls in clnial tims",
-    choices: "\n(a) Red potato\n(b) Eden fruit\n(c) Winter banana\n(d) Potato of the sky",
-    answer: "c"
+    question: "Haxat dis axanethol naxamo kivon te axappros din cereniaxar timos?",
+    choices: "\n(a) Low detaxate\n(b) Odon bluit\n(c) Winkol fuc wunaxa\n(d) Detaxate eb zo shupp",
+    answer: "c",
+    corChoice: "Winkol fuc wunaxa"
   },
   {
-    question: "Wat did prsidnt grg wa$ingtn njy dng wiz his apls",
-    choices: "\n(a) Pruning\n(b) Baking\n(c) Decorating\n(d) Eating plain",
-    answer: "a"
+    question: "Haxat id Plosidonk Koelgo Waxaskickten onjeupp peick um whis axappros?",
+    choices: "\n(a) Plunick\n(b) Faxakick\n(c) Pocelaxatick\n(d) Oaxatick praxain",
+    answer: "a",
+    corChoice: "Plunick"
   },
   {
-    question: "Hw many pawnds awf apls ar nidd tu mayc wn 9-in¢ pi?",
+    question: "Whed vaxanupp deucts eb axappros axalo joodow te vaxako eno 5-dinst pio?",
     choices: "\n(a) 0.5\n(b) 1\n(c) 3\n(d) 2",
-    answer: "d"
+    answer: "d",
+    corChoice: "2"
   },
   {
-    question: "Wr wr z frst apl tris plantd in z u.S.",
-    choices: "\n(a) Massachusetts Bay\n(b) Virginia\n(c) Connecticut\n(d) Other",
-    answer: "a"
+    question: "Holo wolo zo bilch axappro sloos praxankow din zo U.S.?",
+    choices: "\n(a) Vaxassaxastusotts Faxaupp\n(b) Milginiaxa\n(c) Cennondicut\n(d) Ethol",
+    answer: "a",
+    corChoice: "Vaxassaxastusotts Faxaupp"
   },
   {
-    question: "Hw ld ar apl tris wn zy prdus zr frst fruit",
-    choices: "\n(a) 8-10 months\n(b) 4-5 years\n(c) 2-3 years\n(d) 7-8 years",
-    answer: "b"
+    question: "Whed erd axalo axappro sloos hon zoupp pleduco zoil bilch bluit?",
+    choices: "\n(a) 8-10 venkhs\n(b) 4-5 yoaxals\n(c) 2-3 yoaxals\n(d) 7-8 yoaxals",
+    answer: "b",
+    corChoice: "4-5 yoaxals"
   },
 ]
 
@@ -440,7 +460,6 @@ function quitGame() {
 var startButton = document.getElementById('startGame')
 startButton.addEventListener("click", function() {
   if (learnValue != 0 && slipValue != 0 && guessValue != 0) {
-    // window.alert("Your P(Learn) is " + learnValue + ", P(Slip) is " + slipValue + ", and P(Guess) is " + guessValue)
     document.getElementById('mainGame').style.display = 'block'
     document.getElementById('preset').style.display = 'none'
     firstQuestion()
@@ -478,6 +497,7 @@ triviaNum.sort((a,b) => 0.5-Math.random())    //randomizes questions
 var temp = 0
 var currentQuestion = triviaNum[temp]
 var knowValue = 0.2
+var encoded = false
 
 var pKnowSpace = document.getElementById('pKnow')
 var questionSpace = document.getElementById('questions')
@@ -505,7 +525,7 @@ function firstQuestion() {    //loads first question
       choiceSpace.innerHTML = hard[currentQuestion].choices
   }
   pKnowSpace.innerHTML = "P(Know): " + knowValue
-  chanceSpace.innerHTML = "Chances Remaining: " + (10-temp)
+  chanceSpace.innerHTML = "Questions Remaining: " + (10-temp)
   //enables all answer choices
   buttonA.disabled = false;
   buttonB.disabled = false;
@@ -536,21 +556,22 @@ function checkAnswer(choiceLetter) {
         splatSound.play()
         treeImage.src = 'graphics/tease.gif'
         questionSpace.innerHTML = "Oops! You got it right but the apple is rotten"
-        choiceSpace.innerHTML = ''
         updatePKnow(false)
       } else {
         correctSound.play()
         splatSound.play()
         treeImage.src = 'graphics/happy.gif'
         questionSpace.innerHTML = "Correct!"
-        choiceSpace.innerHTML = ''
         updatePKnow(true)
       }
     } else {
       errorSound.play()
       treeImage.src = 'graphics/sad.png'
-      questionSpace.innerHTML = "Incorrect! The correct answer is " + reg[currentQuestion].corChoice
-      choiceSpace.innerHTML = ''
+      if (!encoded) {
+        questionSpace.innerHTML = "Incorrect! The correct answer is " + reg[currentQuestion].corChoice
+      } else {
+        questionSpace.innerHTML = "Incorrect! The correct answer is " + regEncoded[currentQuestion].corChoice
+      }
       updatePKnow(false)
     }
   } else if (learnValue == 0.4) {
@@ -560,21 +581,22 @@ function checkAnswer(choiceLetter) {
         splatSound.play()
         treeImage.src = 'graphics/tease.gif'
         questionSpace.innerHTML = "Oops! You got it right but the apple is rotten"
-        choiceSpace.innerHTML = ''
         updatePKnow(false)
       } else {
         correctSound.play()
         splatSound.play()
         treeImage.src = 'graphics/happy.gif'
         questionSpace.innerHTML = "Correct!"
-        choiceSpace.innerHTML = ''
         updatePKnow(true)
       }
     } else {
       errorSound.play()
       treeImage.src = 'graphics/sad.png'
-      questionSpace.innerHTML = "Incorrect! The correct answer is " + hard[currentQuestion].corChoice
-      choiceSpace.innerHTML = ''
+      if (!encoded) {
+        questionSpace.innerHTML = "Incorrect! The correct answer is " + hard[currentQuestion].corChoice
+      } else {
+        questionSpace.innerHTML = "Incorrect! The correct answer is " + hardEncoded[currentQuestion].corChoice
+      }
       updatePKnow(false)
     }
   }
@@ -603,22 +625,26 @@ function nextQuestion() {
     endGame()
   } else {
     temp++
-    chanceSpace.innerHTML = "Chances Remaining: " + (10-temp)
+    chanceSpace.innerHTML = "Questions Remaining: " + (10-temp)
     currentQuestion = triviaNum[temp]
     treeImage.src = 'graphics/appleTree.png'
     if (learnValue == 0.6) {    //regular version
       if (Math.random() <= guessValue) {
+        encoded = true
         questionSpace.innerHTML = regEncoded[currentQuestion].question
         choiceSpace.innerHTML = regEncoded[currentQuestion].choices
       } else {
+        encoded = false
         questionSpace.innerHTML = reg[currentQuestion].question
         choiceSpace.innerHTML = reg[currentQuestion].choices
       }
     } else {    //hard version
       if (Math.random() <= guessValue) {
+        encoded = true
         questionSpace.innerHTML = hardEncoded[currentQuestion].question
         choiceSpace.innerHTML = hardEncoded[currentQuestion].choices
       } else {
+        encoded = false
         questionSpace.innerHTML = hard[currentQuestion].question
         choiceSpace.innerHTML = hard[currentQuestion].choices
       }
@@ -629,7 +655,7 @@ function nextQuestion() {
 //------Game ends
 function endGame() {
   temp++
-  chanceSpace.innerHTML = "Chances Remaining: " + (10-temp)
+  chanceSpace.innerHTML = "Questions Remaining: " + (10-temp)
   if (knowValue >= 0.95) {   //at mastery
     treeImage.src = 'graphics/excited.png'
     cheerSound.play()
@@ -637,7 +663,7 @@ function endGame() {
   } else {    //ran out of questions
     treeImage.src = 'graphics/degenerate.png'
     gameOverSound.play()
-    questionSpace.innerHTML = "Oh no, you've ran out of chances! Better luck next time :("
+    questionSpace.innerHTML = "Oh no, you've ran out of questions! Better luck next time :("
   }
   choiceSpace.innerHTML = ""
   //disables answer choices

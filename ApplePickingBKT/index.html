@@ -10,22 +10,6 @@
       <h2><i>What</i> Is BKT?</h2>
       <p>Bayesian Knowledge Tracing (BKT for short) is an artificial intelligence algorithm used to predict if students have learned a skill based on their state of knowledge.</p>
 
-      <h2><i>How</i> Is It Calculated?</h2>
-      <p>BKT is calculated based on 4 probabilities: <b>P(Know), P(Learn), P(Slip), and P(Guess)</b>.</p>
-      <p><span style="color:#8FBB09"><b>P(Know)</b></span>: the likelihood of the user learning the targeted content; “mastery” of the content is usually considered achieved if this value reaches 0.95 or greater.</p>
-      <p><span style="color:#ffaa00"><b>P(Learn)</b></span>: the likelihood that the user will learn the skill in the next practice opportunity; this is sometimes referred to how “easily” the skill is to master, and a lower P(Learn) value will suggest a skill that is more difficult to learn than one that has a higher P(Learn) value.</p>
-      <p><span style="color:#fa7e04"><b>P(Slip)</b></span>: the likelihood that the user will answer incorrectly despite already knowing the skill; a low P(Slip) value suggests that if the user already knows the skill, they will almost certainly answer correctly.</p>
-      <p><span style="color:#F64D0D"><b>P(Guess)</b></span>: the likelihood that the user will answer correctly despite not knowing the skill; a P(Guess) value that is too high might suggest some degeneracy in the model where the P(Know) value implies that the user has mastered the skill but in reality, they are just good at guessing.</p>
-
-      <button type="button" class="wood" id="algoButton" style="font-size: 25px">See The Algorithm</button>
-      <div id="algoSpace" style="display: none">
-        <p>First, we calculate the conditional probability that the apple trivia was learned previously (at time n-1), based on whether the current question (at time n) was answered correctly or incorrectly:</p>
-        <img src="condRight.png" alt="correct conditional probability"> <br>
-        <img src="condWrong.png" alt="incorrect conditional probability">
-        <p>Then, we use that result to compute the conditional probability that the student has learned the skill now (at time n):</p>
-        <img src="pKnow.png" alt="P(Know) probability from conditional results">
-      </div>
-
       <h2><i>Why</i> Is It Useful?</h2>
       <p>BKT provides us with a means to advance users’ learning experiences to make them more engaging and are utilized through Open Learning Initiatives. It’s also a great tool for instructors to infer whether or not students are successful in their efforts and can improve their curriculum accordingly.</p>
 
@@ -68,27 +52,27 @@
         <div id="pLearn-parent">
           <h2>Please choose a difficulty setting:</h2>
           <br>
-          <button type="button" class="pLearnButton">Regular <br>(P(Learn) = 0.6)</button>
-          <button type="button" class="pLearnButton">Hard <br>(P(Learn) = 0.4)</button>
+          <button type="button" class="pLearnButton">Regular</button>
+          <button type="button" class="pLearnButton">Hard</button>
         </div>
 
         <div id="pSlip-parent">
-          <h2>Please select a level for P(Slip):</h2>
+          <h2>Please select how likely the apple picked is rotten:</h2>
           <br>
-          <button type="button" class="pSlipButton">Low<br>0.1</button>
-          <button type="button" class="pSlipButton">Med<br>0.2</button>
-          <button type="button" class="pSlipButton">High<br>0.3</button>
+          <button type="button" class="pSlipButton">Low</button>
+          <button type="button" class="pSlipButton">Med</button>
+          <button type="button" class="pSlipButton">High</button>
         </div>
 
         <div id="pGuess-parent">
-          <h2>Please select a level for P(Guess):</h2>
+          <h2>Please select how likely the question asked is encoded:</h2>
           <br>
-          <button type="button" class="pGuessButton">Low<br>0.1</button>
-          <button type="button" class="pGuessButton">Med<br>0.2</button>
-          <button type="button" class="pGuessButton">High<br>0.3</button>
+          <button type="button" class="pGuessButton">Low</button>
+          <button type="button" class="pGuessButton">Med</button>
+          <button type="button" class="pGuessButton">High</button>
         </div>
 
-        <br>
+        <br><br><br><br>
         <button type="button" class="wood" id="backHome">Back Home</button>
         <button type="button" class="wood" id="startGame">Let's Pick Apples!</button>
       </div>
@@ -106,10 +90,44 @@
           <button type="button" class="answerChoice">Choice C</button>
           <button type="button" class="answerChoice">Choice D</button>
           <br>
-        <button type="button" class="wood" id="quit">Quit Game</button>
+          <button type="button" class="wood" id="quit">Quit Game</button>
+          <br>
       </div>
     </div>
-    <br>
+
+    <div id="explain" style="display: none">
+      <p>BKT is calculated based on 4 probabilities: <b>P(Know), P(Learn), P(Slip), and P(Guess)</b>.</p>
+      <p><span style="color:#985413"><b>P(Know)</b></span>: the likelihood of the user learning the targeted content; “mastery” of the content is usually considered achieved if this value reaches 0.95 or greater.</p>
+      <p>In the game, the user starts off with an arbitrary level of apple knowledge: P(Know) = 0.2</p>
+      <p>As they answer more and more questions, P(Know) increases or decreases in accordance to whether the answer was correct or incorrect as well as the preset parameters for P(Learn), P(Slip), and P(Guess).</p>
+
+      <p><b><i>Huh</i>? When were those other 3 parameters preset?</b></p>
+
+      <p><span style="color:#ffaa00"><b>P(Learn)</b></span>: the likelihood that the user will learn the skill in the next practice opportunity; this is sometimes referred to how “easily” the skill is to master, and a lower P(Learn) value will suggest a skill that is more difficult to learn than one that has a higher P(Learn) value.</p>
+      <p>P(Learn) was preset when the user selected a difficulty setting: regular or hard.</p>
+      <p>By choosing the difficulty, they also set up how "easy" or "hard" the concept will be to learn. In the game, selecting Regular would equate to a P(Learn) of 0.6 while selecting Hard equated to a P(Learn) of 0.4, corresponding with the concept that a higher P(Learn) value suggests that a concept is easier to learn than one with a lower P(Learn) value.</p>
+
+      <p><span style="color:#fa7e04"><b>P(Slip)</b></span>: the likelihood that the user will answer incorrectly despite already knowing the skill; a low P(Slip) value suggests that if the user already knows the skill, they will almost certainly answer correctly.</p>
+      <p>P(Slip) was preset when selecting how likely an apple the user succeeded in picking turns out to be rotten. This represents the idea that even though the student has "learned" the concept, they still make a mistake and answer incorrectly. In the game, they might select the correct answer choice, but if the apple turns out to be rotten, it will be counted as incorrect.</p>
+
+      <p><span style="color:#F64D0D"><b>P(Guess)</b></span>: the likelihood that the user will answer correctly despite not knowing the skill; a P(Guess) value that is too high might suggest some degeneracy in the model where the P(Know) value implies that the user has mastered the skill but in reality, they are just good at guessing.</p>
+      <p>P(Guess) was preset when selecting how likely questions asked will be encoded. By encoding the questions and answer choices, the user is forced to guess. This is to illustrate the concept of not knowing the content and guessing on the answer. Unlike the actual BKT parameter, where the correct answer is chosen even without knowledge of content, users can still answer incorrectly in the gameplay.</p>
+
+      <button type="button" class="wood" id="algoButton" style="font-size: 25px">How Is It Calculated?</button>
+      <div id="algoSpace" style="display: none">
+        <p>First, we calculate the conditional probability that the apple trivia was learned previously (at time n-1), based on whether the current question (at time n) was answered correctly or incorrectly:</p>
+        <img src="condRight.png" alt="correct conditional probability"> <br>
+        <img src="condWrong.png" alt="incorrect conditional probability">
+        <p>Then, we use that result to compute the conditional probability that the student has learned the skill now (at time n):</p>
+        <img src="pKnow.png" alt="P(Know) probability from conditional results">
+      </div>
+    </div>
+    <br><br>
+    <div id="moreContainer" style="text-align: center; display: none">
+      <button type="button" class="wood" id="more">So What Does Apple Picking Have To Do With BKT?</button>
+    </div>
+
+    <br><br><br><br>
     <script src="script.js"></script>
   </body>
 </html>

@@ -2,12 +2,12 @@
 var mathButton = document.getElementById('algoButton')
 var mathSpace = document.getElementById('algoSpace')
 mathButton.addEventListener("click", function() {
-  if (mathButton.innerHTML == "See The Algorithm") {
+  if (mathButton.innerHTML == "How Is It Calculated?") {
     mathSpace.style.display = 'block'
     mathButton.innerHTML = "Hide The Algorithm"
   } else {
     mathSpace.style.display = 'none'
-    mathButton.innerHTML = "See The Algorithm"
+    mathButton.innerHTML = "How Is It Calculated?"
   }
 })
 
@@ -40,7 +40,6 @@ toInstructions.addEventListener("click", function() {
   document.getElementById('home').style.display = 'none'
   slideIndex = 0
   prevSlide.disabled = true
-  //nextSlide.disabled = false
   nextSlide.innerHTML = "Next"
   document.slide.src = slideImages[slideIndex]
   progess.innerHTML = "Slide " + (slideIndex+1) + "/9"
@@ -442,6 +441,11 @@ function quitGame() {
   document.getElementById('home').style.display = 'block'
   document.getElementById('preset').style.display = 'none'
   document.getElementById('mainGame').style.display = 'none'
+  document.getElementById('moreContainer').style.display = 'none'
+  moreButton.innerHTML = "So What Does Apple Picking Have To Do With BKT?"
+  moreSpace.style.display = 'none'
+  mathSpace.style.display = 'none'
+  mathButton.innerHTML = "How Is It Calculated?"
   resetPLearnButtons()
   resetPSlipButtons()
   resetPGuessButtons()
@@ -464,7 +468,7 @@ startButton.addEventListener("click", function() {
     document.getElementById('preset').style.display = 'none'
     firstQuestion()
   } else {
-    window.alert("You need to choose a difficulty setting and values for P(Slip) and P(Guess)!")
+    window.alert("You need to choose a difficulty setting and probabilities for rotten apples and encoded questions!")
   }
 })
 
@@ -653,6 +657,9 @@ function nextQuestion() {
 }
 
 //------Game ends
+var moreButton = document.getElementById('more')
+var moreSpace = document.getElementById('explain')
+
 function endGame() {
   temp++
   chanceSpace.innerHTML = "Questions Remaining: " + (10-temp)
@@ -671,4 +678,16 @@ function endGame() {
   buttonB.disabled = true;
   buttonC.disabled = true;
   buttonD.disabled = true;
+
+  document.getElementById('moreContainer').style.display = 'block'
 }
+
+moreButton.addEventListener("click", function() {
+  if (moreButton.innerHTML == "So What Does Apple Picking Have To Do With BKT?") {
+    moreButton.innerHTML = "Hide Further Explanation"
+    moreSpace.style.display = 'block'
+  } else {
+    moreButton.innerHTML = "So What Does Apple Picking Have To Do With BKT?"
+    moreSpace.style.display = 'none'
+  }
+})

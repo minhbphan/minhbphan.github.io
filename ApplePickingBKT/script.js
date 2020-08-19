@@ -19,7 +19,7 @@ presetButton.addEventListener("click", function() {
   document.getElementById('home').style.display = 'none'
 })
 
-//tutorial slides
+// //tutorial slides
 var slideIndex = 0
 var slideImages = []
 slideImages[0] = "tutorial/slide1.png"
@@ -528,7 +528,7 @@ function firstQuestion() {    //loads first question
       questionSpace.innerHTML = hard[currentQuestion].question
       choiceSpace.innerHTML = hard[currentQuestion].choices
   }
-  pKnowSpace.innerHTML = "P(Know): " + knowValue
+  pKnowSpace.innerHTML = "Apple Mastery: " + knowValue + " / 0.95"
   chanceSpace.innerHTML = "Questions Remaining: " + (10-temp)
   //enables all answer choices
   buttonA.disabled = false;
@@ -620,7 +620,7 @@ function updatePKnow(correct) {
     var w = (knowValue * slipValue) / ((knowValue * slipValue) + (knowValue_c * guessValue_c))
     knowValue =  w + (1.0 - w) * learnValue
   }
-  pKnowSpace.innerHTML = "P(Know): " + knowValue.toFixed(2)
+  pKnowSpace.innerHTML = "Apple Mastery: " + knowValue.toFixed(2) + " / 0.95"
 }
 
 //--------helper function to update the question asked

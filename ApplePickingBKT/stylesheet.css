@@ -21,7 +21,7 @@ body {
   margin: 0px 3px;
 }
 
-#pKnow, #chances {
+#pKnow{
   font-weight: bolder;
   display:inline-block;
   background-color: #ffbe00;

@@ -8,7 +8,7 @@
     <div class="intro">
       <img src="title.png" alt="title image">
       <h2><i>What</i> Is BKT?</h2>
-      <p>Bayesian Knowledge Tracing (BKT for short) is an artificial intelligence algorithm used to predict if students have learned a skill based on their state of knowledge.</p>
+      <p>Bayesian Knowledge Tracing (BKT for short) is an artificial intelligence algorithm used to predict if students have learned a skill based on their state of knowledge. It uses parameters of students' prior knowledge, ability to learn the new material, probability of making a mistake, and probability of guessing on new concepts.</p>
 
       <h2><i>Why</i> Is It Useful?</h2>
       <p>BKT provides us with a means to advance users’ learning experiences to make them more engaging and are utilized through Open Learning Initiatives. It’s also a great tool for instructors to infer whether or not students are successful in their efforts and can improve their curriculum accordingly.</p>
@@ -65,7 +65,7 @@
         </div>
 
         <div id="pGuess-parent">
-          <h2>Please select how likely the question asked is encoded:</h2>
+          <h2>Please select how likely the question asked is written in gibberish:</h2>
           <br>
           <button type="button" class="pGuessButton">Low</button>
           <button type="button" class="pGuessButton">Med</button>
@@ -79,8 +79,8 @@
 
       <!-- mainGame is scene of actual gameplay -->
       <div id="mainGame" style="display: none">
-        <h2 id="pKnow" style="margin-right:350px">P(Know): 0.2</h2>
-        <h2 id="chances">Questions Remaining: </h2>
+        <h2 id="pKnow"></h2>
+        <h3 id="chances"></h3>
         <br>
         <img id="tree" src="graphics/appleTree.png" alt="neutral tree"  style="height: 500px; width: auto; position: relative">
         <h2 id = "questions"></h2>
@@ -89,7 +89,7 @@
           <button type="button" class="answerChoice">Choice B</button>
           <button type="button" class="answerChoice">Choice C</button>
           <button type="button" class="answerChoice">Choice D</button>
-          <br>
+          <br><br>
           <button type="button" class="wood" id="quit">Quit Game</button>
           <br>
       </div>
